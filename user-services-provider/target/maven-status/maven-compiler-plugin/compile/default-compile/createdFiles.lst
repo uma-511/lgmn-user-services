@@ -1,0 +1,7 @@
+com\lgmn\userservices\UserServiceProviderApplication.class
+com\lgmn\userservices\provider\service\LgmnRoleEntityServiceImpl.class
+com\lgmn\userservices\provider\service\LgmnUserEntityServiceImpl.class
+com\lgmn\userservices\provider\service\LgmnPermissionEntityServiceImpl.class
+com\lgmn\userservices\provider\service\LgmnRolePermissionEntityServiceImpl.class
+com\lgmn\userservices\provider\service\LgmnUserRoleEntityServiceImpl.class
+com\lgmn\userservices\provider\config\ApplicationConfig.class
