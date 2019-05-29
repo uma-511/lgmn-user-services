@@ -2,10 +2,10 @@ package com.lgmn.userservices.provider.service;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.lgmn.common.service.LgmnAbstractService;
-import com.lgmn.userservices.api.dto.LgmnRoleDto;
-import com.lgmn.userservices.api.entity.LgmnRoleEntity;
-import com.lgmn.userservices.api.repository.LgmnRoleEntityRepository;
-import com.lgmn.userservices.api.service.LgmnRoleEntityService;
+import com.lgmn.userservices.basic.dto.LgmnRoleDto;
+import com.lgmn.userservices.basic.entity.LgmnRoleEntity;
+import com.lgmn.userservices.basic.repository.LgmnRoleEntityRepository;
+import com.lgmn.userservices.basic.service.LgmnRoleEntityService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;

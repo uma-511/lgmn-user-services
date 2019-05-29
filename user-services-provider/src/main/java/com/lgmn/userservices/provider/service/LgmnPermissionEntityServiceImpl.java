@@ -2,10 +2,10 @@ package com.lgmn.userservices.provider.service;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.lgmn.common.service.LgmnAbstractService;
-import com.lgmn.userservices.api.dto.LgmnPermissionDto;
-import com.lgmn.userservices.api.entity.LgmnPermissionEntity;
-import com.lgmn.userservices.api.repository.LgmnPermissionEntityRepository;
-import com.lgmn.userservices.api.service.LgmnPermissionEntityService;
+import com.lgmn.userservices.basic.dto.LgmnPermissionDto;
+import com.lgmn.userservices.basic.entity.LgmnPermissionEntity;
+import com.lgmn.userservices.basic.repository.LgmnPermissionEntityRepository;
+import com.lgmn.userservices.basic.service.LgmnPermissionEntityService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;

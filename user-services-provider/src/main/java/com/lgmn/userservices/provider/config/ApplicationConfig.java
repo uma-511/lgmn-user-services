@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @Configuration
 @EnableJpaRepositories(basePackages = {
         "com.lgmn.common.repository",//固定必填
-        "com.lgmn.userservices.api.repository"//指向模块的api.repository包
+        "com.lgmn.userservices.basic.repository"//指向模块的api.repository包
 },
         repositoryBaseClass = LgmnRepositoryImpl.class //自定义实现代替默认jpa实现
 )

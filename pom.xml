@@ -16,7 +16,7 @@
 
 
   <modules>
-    <module>user-services-api</module>
+    <module>user-services-basic</module>
     <module>user-services-provider</module>
   </modules>
 
