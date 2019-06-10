@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM gmaslowski/jdk:8
 VOLUME /tmp
-ADD user-service-provider-0.0.1.jar app.jar
+ADD lgmn-user-services/user-services-provider/target/user-service-provider-1.0.jar app.jar
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar","--spring.profiles.active=test"]
