@@ -11,7 +11,7 @@ import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
-@Table(name = "lgmn_role", schema = "shandian", catalog = "")
+@Table(name = "lgmn_role", schema = "lgmn_user_services", catalog = "")
 @EntityListeners(AuditingEntityListener.class)
 @GenericGenerator(name = "jpa-uuid", strategy = "uuid")
 public class LgmnRoleEntity implements Serializable {

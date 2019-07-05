@@ -1,17 +1,17 @@
 package com.lgmn.userservices.basic.repository;
 
-import com.lgmn.common.repository.LgmnRepository;
+import java.util.Date;
+import java.util.List;
+
 import com.lgmn.userservices.basic.dto.LgmnPermissionDto;
 import com.lgmn.userservices.basic.entity.LgmnPermissionEntity;
+import com.lgmn.common.repository.LgmnRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
 @Repository
-public interface LgmnPermissionEntityRepository extends LgmnRepository<LgmnPermissionEntity, LgmnPermissionDto, String> {
-
+public interface LgmnPermissionRepository extends LgmnRepository<LgmnPermissionEntity, LgmnPermissionDto, String> {
     @Query(value = "select lp.* from lgmn_permission lp RIGHT JOIN lgmn_role_permission lrp on lp.id=lrp.permission_id where lrp.role_id=:roleId",nativeQuery = true)
     List<LgmnPermissionEntity> querySelctedPermission(@Param("roleId") String roleId);
 

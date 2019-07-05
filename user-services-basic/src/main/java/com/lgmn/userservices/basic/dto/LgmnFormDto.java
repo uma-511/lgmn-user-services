@@ -5,12 +5,13 @@ import com.lgmn.common.domain.LgmnDto;
 import lombok.Data;
 
 @Data
-public class LgmnUserRoleDto extends LgmnDto {
+public class LgmnFormDto extends LgmnDto {
     	@Condition
     private Integer id;
     	@Condition
-    private String userId;
+    private Integer permissionId;
+        //表单类型 1:新增表单 2:修改表单 3:详情表单 4:搜索表单
     	@Condition
-    private String roleId;
+    private Integer formType;
 
 }

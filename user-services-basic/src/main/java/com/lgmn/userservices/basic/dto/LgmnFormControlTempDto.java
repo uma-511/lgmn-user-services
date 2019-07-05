@@ -5,12 +5,14 @@ import com.lgmn.common.domain.LgmnDto;
 import lombok.Data;
 
 @Data
-public class LgmnUserRoleDto extends LgmnDto {
+public class LgmnFormControlTempDto extends LgmnDto {
     	@Condition
     private Integer id;
+        //控件类型值（input、select、radio...)
     	@Condition
-    private String userId;
+    private String type;
+        //控件名称
     	@Condition
-    private String roleId;
+    private String name;
 
 }

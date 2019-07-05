@@ -5,12 +5,15 @@ import com.lgmn.common.domain.LgmnDto;
 import lombok.Data;
 
 @Data
-public class LgmnUserRoleDto extends LgmnDto {
+public class LgmnRoleFieldDto extends LgmnDto {
     	@Condition
     private Integer id;
     	@Condition
-    private String userId;
+    private Integer roleId;
     	@Condition
-    private String roleId;
+    private Integer fieldId;
+        //是否显示，0：隐藏 1：显示
+    	@Condition
+    private Integer isShow;
 
 }

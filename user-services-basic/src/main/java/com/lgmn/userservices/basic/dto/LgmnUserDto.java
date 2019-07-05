@@ -1,38 +1,37 @@
 package com.lgmn.userservices.basic.dto;
 
+import java.util.Date;
 import com.lgmn.common.annotation.Condition;
 import com.lgmn.common.domain.LgmnDto;
-import com.lgmn.common.enums.ConditionExcept;
 import lombok.Data;
-
-import java.sql.Timestamp;
-import java.util.List;
 
 @Data
 public class LgmnUserDto extends LgmnDto {
-    @Condition(except = ConditionExcept.IN)
-    private List<String> id;
-    @Condition
+    	@Condition
+    private String id;
+        //头像
+    	@Condition
     private String avatar;
-    @Condition
+        //登录账号
+    	@Condition(ignoreEmpty = true)
     private String account;
-    @Condition(except = ConditionExcept.CONTAIN)
+        //昵称
+    	@Condition(ignoreEmpty = true)
     private String nikeName;
-    @Condition
+        //密码
+    	@Condition
     private String password;
-
-    @Condition(field = "regTime",isMax = true, except = ConditionExcept.BETWEEN_AND)
-    private Timestamp endRegTime;
-
-    @Condition(field = "regTime",isMin = true, except = ConditionExcept.BETWEEN_AND)
-    private Timestamp beginRegTime;
-
-    @Condition(field = "lastLoginTime",isMax = true, except = ConditionExcept.BETWEEN_AND)
-    private Timestamp endLastLoginTime;
-
-    @Condition(field = "lastLoginTime",isMin = true, except = ConditionExcept.BETWEEN_AND)
-    private Timestamp beginLastLoginTime;
-
-    @Condition
+        //密码盐
+    	@Condition
+    private String salt;
+        //注册时间
+    	@Condition
+    private Date regTime;
+        //最后一次登录时间
+    	@Condition
+    private Date lastLoginTime;
+        //用户类型 0：app用户 1：销售员 3：后台用户
+    	@Condition
     private Integer userType;
+
 }
