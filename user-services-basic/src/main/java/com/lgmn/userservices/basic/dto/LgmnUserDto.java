@@ -12,11 +12,11 @@ public class LgmnUserDto extends LgmnDto {
         //头像
     	@Condition
     private String avatar;
-        //登录账号
-    	@Condition(ignoreEmpty = true)
+    //登录账号
+    @Condition(ignoreEmpty = true)
     private String account;
-        //昵称
-    	@Condition(ignoreEmpty = true)
+    //昵称
+    @Condition(ignoreEmpty = true)
     private String nikeName;
         //密码
     	@Condition
