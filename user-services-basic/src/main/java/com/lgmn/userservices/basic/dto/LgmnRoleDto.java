@@ -1,14 +1,17 @@
 package com.lgmn.userservices.basic.dto;
 
 import java.util.Date;
+import java.util.List;
+
 import com.lgmn.common.annotation.Condition;
 import com.lgmn.common.domain.LgmnDto;
+import com.lgmn.common.enums.ConditionExcept;
 import lombok.Data;
 
 @Data
 public class LgmnRoleDto extends LgmnDto {
-    	@Condition
-    private String id;
+    @Condition(except = ConditionExcept.IN)
+    private List<String> id;
         //权限名称
     	@Condition
     private String name;
