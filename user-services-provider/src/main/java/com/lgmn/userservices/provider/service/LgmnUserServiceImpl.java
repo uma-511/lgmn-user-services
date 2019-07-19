@@ -55,6 +55,12 @@ public class LgmnUserServiceImpl extends LgmnAbstractService<LgmnUserEntity, Lgm
         }
     }
 
+    @Override
+    public Result login(LgmnUserDto loginDto) {
+        loginDto.getPassword();
+        return null;
+    }
+
     private void initUser(LgmnUserEntity lgmnUserEntity){
         String password = lgmnUserEntity.getPassword();
         if(StringUtils.isEmpty(lgmnUserEntity.getAvatar())){

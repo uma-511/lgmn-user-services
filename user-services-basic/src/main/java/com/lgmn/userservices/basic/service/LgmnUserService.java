@@ -10,4 +10,6 @@ public interface LgmnUserService extends LgmnService<LgmnUserEntity, LgmnUserDto
     Result register(LgmnUserEntity lgmnUserEntity);
 
     Result resetPassword(ResetUserPwdDto resetUserPwdDto);
+
+    Result login(LgmnUserDto loginDto);
 }
