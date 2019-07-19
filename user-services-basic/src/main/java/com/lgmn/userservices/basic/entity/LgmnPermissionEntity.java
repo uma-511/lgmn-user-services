@@ -21,9 +21,9 @@ public class LgmnPermissionEntity implements Serializable {
     private String remark;
     private Timestamp createTime;
     private Timestamp updateTime;
-    private Integer type;
-    private Integer multilang;
-    private Integer langId;
+//    private Integer type;
+//    private Integer multilang;
+//    private Integer langId;
 
     @Id
     @GeneratedValue(generator = "jpa-uuid")
@@ -106,33 +106,33 @@ public class LgmnPermissionEntity implements Serializable {
         return Objects.hash(id, name, chineseName, remark, createTime, updateTime);
     }
 
-    @Basic
-    @Column(name = "type", nullable = true)
-    public Integer getType() {
-        return type;
-    }
-
-    public void setType(Integer type) {
-        this.type = type;
-    }
-
-    @Basic
-    @Column(name = "multilang", nullable = true)
-    public Integer getMultilang() {
-        return multilang;
-    }
-
-    public void setMultilang(Integer multilang) {
-        this.multilang = multilang;
-    }
-
-    @Basic
-    @Column(name = "lang_id", nullable = true)
-    public Integer getLangId() {
-        return langId;
-    }
-
-    public void setLangId(Integer langId) {
-        this.langId = langId;
-    }
+//    @Basic
+//    @Column(name = "type", nullable = true)
+//    public Integer getType() {
+//        return type;
+//    }
+//
+//    public void setType(Integer type) {
+//        this.type = type;
+//    }
+//
+//    @Basic
+//    @Column(name = "multilang", nullable = true)
+//    public Integer getMultilang() {
+//        return multilang;
+//    }
+//
+//    public void setMultilang(Integer multilang) {
+//        this.multilang = multilang;
+//    }
+//
+//    @Basic
+//    @Column(name = "lang_id", nullable = true)
+//    public Integer getLangId() {
+//        return langId;
+//    }
+//
+//    public void setLangId(Integer langId) {
+//        this.langId = langId;
+//    }
 }
