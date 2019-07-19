@@ -14,6 +14,6 @@ public class LgmnRolePermissionDto extends LgmnDto {
     @Condition(except = ConditionExcept.IN)
     private List<String> roleId;
     @Condition(except = ConditionExcept.IN)
-    private String permissionId;
+    private List<String> permissionId;
 
 }

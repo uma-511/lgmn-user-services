@@ -1,5 +1,6 @@
 package com.lgmn.userservices.basic.dto;
 
+import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 
@@ -23,18 +24,18 @@ public class LgmnPermissionDto extends LgmnDto {
     private String remark;
         //创建时间
     	@Condition
-    private Date createTime;
+    private Timestamp createTime;
         //更新时间
     	@Condition
-    private Date updateTime;
+    private Timestamp updateTime;
         //权限类别 1：模块 2：功能
-    	@Condition
-    private Integer type;
-        //是否设置多语言
-    	@Condition
-    private Integer multilang;
-        //多语言id
-    	@Condition
-    private Integer langId;
+//    	@Condition
+//    private Integer type;
+//        //是否设置多语言
+//    	@Condition
+//    private Integer multilang;
+//        //多语言id
+//    	@Condition
+//    private Integer langId;
 
 }

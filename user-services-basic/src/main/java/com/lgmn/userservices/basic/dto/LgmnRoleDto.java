@@ -20,7 +20,7 @@ public class LgmnRoleDto extends LgmnDto {
     private String chineseName;
         //是否可用 1：是 0：否
     	@Condition
-    private byte valid;
+    private Byte valid;
         //备注
     	@Condition
     private String remark;
