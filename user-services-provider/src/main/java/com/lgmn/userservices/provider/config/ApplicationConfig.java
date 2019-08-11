@@ -1,8 +1,8 @@
 package com.lgmn.userservices.provider.config;
 
 import com.lgmn.common.repository.impl.LgmnRepositoryImpl;
-import io.seata.spring.annotation.GlobalTransactionScanner;
-import org.springframework.context.annotation.Bean;
+//import io.seata.spring.annotation.GlobalTransactionScanner;
+//import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
@@ -23,8 +23,8 @@ public class ApplicationConfig {
      *
      * @Return: GlobalTransactionScanner
      */
-    @Bean
-    public GlobalTransactionScanner globalTransactionScanner(){
-        return new GlobalTransactionScanner("user-service-provider", "my_test_tx_group");
-    }
+//    @Bean
+//    public GlobalTransactionScanner globalTransactionScanner(){
+//        return new GlobalTransactionScanner("user-service-provider", "my_test_tx_group");
+//    }
 }

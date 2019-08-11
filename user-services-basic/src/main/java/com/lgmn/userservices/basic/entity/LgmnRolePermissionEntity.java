@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-@Table(name = "lgmn_role_permission", schema = "shandian", catalog = "")
+@Table(name = "lgmn_role_permission", schema = "lgmn_user_services", catalog = "")
 public class LgmnRolePermissionEntity implements Serializable {
     private int id;
     private String roleId;

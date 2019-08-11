@@ -1,14 +1,15 @@
 package com.lgmn.userservices.provider.service;
 
+import java.util.Date;
+import java.util.List;
+
 import com.alibaba.dubbo.config.annotation.Service;
-import com.lgmn.common.service.LgmnAbstractService;
 import com.lgmn.userservices.basic.dto.LgmnPermissionDto;
 import com.lgmn.userservices.basic.entity.LgmnPermissionEntity;
-import com.lgmn.userservices.basic.repository.LgmnPermissionEntityRepository;
-import com.lgmn.userservices.basic.service.LgmnPermissionEntityService;
+import com.lgmn.userservices.basic.repository.LgmnPermissionRepository;
+import com.lgmn.userservices.basic.service.LgmnPermissionService;
+import com.lgmn.common.service.LgmnAbstractService;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.List;
 
 @Service(
         version = "${demo.service.version}",
@@ -16,27 +17,27 @@ import java.util.List;
         protocol = "${dubbo.protocol.id}",
         registry = "${dubbo.registry.id}"
 )
-public class LgmnPermissionEntityServiceImpl extends LgmnAbstractService<LgmnPermissionEntity,LgmnPermissionDto,String,LgmnPermissionEntityRepository> implements LgmnPermissionEntityService {
+public class LgmnPermissionServiceImpl extends LgmnAbstractService<LgmnPermissionEntity, LgmnPermissionDto, String, LgmnPermissionRepository> implements LgmnPermissionService {
 
     @Autowired
-    private LgmnPermissionEntityRepository lgmnpermissionentityRepository;
+    private LgmnPermissionRepository lgmnPermissionRepository;
 
-    public LgmnPermissionEntityServiceImpl(LgmnPermissionEntityRepository repository) {
+    public LgmnPermissionServiceImpl(LgmnPermissionRepository repository) {
         super(repository);
     }
 
     @Override
     public List<LgmnPermissionEntity> querySelctedPermission(String roleId) {
-        return lgmnpermissionentityRepository.querySelctedPermission(roleId);
+        return lgmnPermissionRepository.querySelctedPermission(roleId);
     }
 
     @Override
     public List<LgmnPermissionEntity> queryCanSelctPermission(String roleId) {
-        return lgmnpermissionentityRepository.queryCanSelctPermission(roleId);
+        return lgmnPermissionRepository.queryCanSelctPermission(roleId);
     }
 
     @Override
     public List<LgmnPermissionEntity> queryUserPermission(String userId) {
-        return lgmnpermissionentityRepository.queryUserPermission(userId);
+        return lgmnPermissionRepository.queryUserPermission(userId);
     }
 }

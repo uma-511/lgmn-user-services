@@ -11,7 +11,7 @@
     <artifactId>user-services-provider</artifactId>
 
     <dependencies>
-        <dependency>
+    <!--    <dependency>
             <groupId>io.seata</groupId>
             <artifactId>seata-spring</artifactId>
         </dependency>
@@ -34,7 +34,7 @@
                     <groupId>org.apache.dubbo</groupId>
                 </exclusion>
             </exclusions>
-        </dependency>
+        </dependency>-->
 
 
         <dependency>

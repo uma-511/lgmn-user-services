@@ -9,10 +9,11 @@ import java.util.List;
 
 @Data
 public class LgmnUserRoleDto extends LgmnDto {
-    @Condition(except = ConditionExcept.IN)
-    private List<Integer> id;
-    @Condition
+    	@Condition
+    private Integer id;
+    	@Condition
     private String userId;
     @Condition(except = ConditionExcept.IN)
     private List<String> roleId;
+
 }

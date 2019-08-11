@@ -1,14 +1,15 @@
 package com.lgmn.userservices.provider.service;
 
+import java.util.Date;
+import java.util.List;
+
 import com.alibaba.dubbo.config.annotation.Service;
-import com.lgmn.common.service.LgmnAbstractService;
 import com.lgmn.userservices.basic.dto.LgmnRoleDto;
 import com.lgmn.userservices.basic.entity.LgmnRoleEntity;
-import com.lgmn.userservices.basic.repository.LgmnRoleEntityRepository;
-import com.lgmn.userservices.basic.service.LgmnRoleEntityService;
+import com.lgmn.userservices.basic.repository.LgmnRoleRepository;
+import com.lgmn.userservices.basic.service.LgmnRoleService;
+import com.lgmn.common.service.LgmnAbstractService;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.List;
 
 @Service(
         version = "${demo.service.version}",
@@ -16,22 +17,22 @@ import java.util.List;
         protocol = "${dubbo.protocol.id}",
         registry = "${dubbo.registry.id}"
 )
-public class LgmnRoleEntityServiceImpl extends LgmnAbstractService<LgmnRoleEntity,LgmnRoleDto,String,LgmnRoleEntityRepository> implements LgmnRoleEntityService {
+public class LgmnRoleServiceImpl extends LgmnAbstractService<LgmnRoleEntity, LgmnRoleDto, String, LgmnRoleRepository> implements LgmnRoleService {
 
     @Autowired
-    private LgmnRoleEntityRepository lgmnroleentityRepository;
+    private LgmnRoleRepository lgmnRoleRepository;
 
-    public LgmnRoleEntityServiceImpl(LgmnRoleEntityRepository repository) {
+    public LgmnRoleServiceImpl(LgmnRoleRepository repository) {
         super(repository);
     }
 
     @Override
     public List<LgmnRoleEntity> querySelctedRole(String userId) {
-        return lgmnroleentityRepository.querySelctedRole(userId);
+        return lgmnRoleRepository.querySelctedRole(userId);
     }
 
     @Override
     public List<LgmnRoleEntity> queryCanSelctRole(String userId) {
-        return lgmnroleentityRepository.queryCanSelctRole(userId);
+        return lgmnRoleRepository.queryCanSelctRole(userId);
     }
 }

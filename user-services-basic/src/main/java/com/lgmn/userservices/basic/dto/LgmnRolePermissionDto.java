@@ -10,11 +10,10 @@ import java.util.List;
 @Data
 public class LgmnRolePermissionDto extends LgmnDto {
     @Condition(except = ConditionExcept.IN)
-    protected List<Integer> id;
-
+    private Integer id;
     @Condition(except = ConditionExcept.IN)
     private List<String> roleId;
-
     @Condition(except = ConditionExcept.IN)
     private List<String> permissionId;
+
 }
