@@ -1,39 +1,78 @@
+#spring:
+#  application:
+#    name: user-service-provider
+#  datasource:
+#    driver-class-name: net.sf.log4jdbc.DriverSpy
+#    url: jdbc:log4jdbc:mysql://127.0.0.1:3306/lgmn_user_services?useSSL=false&useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&serverTimezone=GMT%2b8
+#    username: root
+#    password: UMa@mysql2019
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#    show-sql: true
+#  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+#    time-zone: GMT+8
+#server:
+#  port: 9090
+#management:
+#  port: 9091
+#dubbo:
+#  registry:
+#    id: user-service-provider-registry
+#    address: nacos://127.0.0.1:8848
+#  protocol:
+#    id: dubbo
+#    name: dubbo
+#    port: -1
+#  application:
+#    id: user-service-provider
+#    name: user-service-provider
+#  scan:
+#    basePackages: com.lgmn.userservices.provider.service
+#demo:
+#  service:
+#    version: 1.0.0
+#nacos:
+#  config:
+#    server-addr: 127.0.0.1:8848
+
+nacos:
+  config:
+    server-addr: nacos-standalone-mysql:8848
+demo:
+  service:
+    version: 1.0.0
 spring:
   application:
     name: user-service-provider
   datasource:
-    driver-class-name: net.sf.log4jdbc.DriverSpy
-    url: jdbc:log4jdbc:mysql://127.0.0.1:3306/lgmn_user_services?useSSL=false&useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&serverTimezone=GMT%2b8
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://mysql57:3306/swcy?useSSL=false&useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&serverTimezone=GMT%2b8
     username: root
-    password: UMa@mysql2019
+    password: 123456
   jpa:
+    show-sql: true
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-    show-sql: true
+        format_sql: true
+      use_sql_comments: true
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
-server:
-  port: 9090
-management:
-  port: 9091
 dubbo:
-  registry:
-    id: user-service-provider-registry
-    address: nacos://127.0.0.1:8848
   protocol:
     id: dubbo
     name: dubbo
     port: -1
+  registry:
+    id: user-service-provider-registry
+    address: nacos://nacos-standalone-mysql:8848
+  scan:
+    base-packages: com.lgmn.userservices.provider.service
   application:
     id: user-service-provider
     name: user-service-provider
-  scan:
-    basePackages: com.lgmn.userservices.provider.service
-demo:
-  service:
-    version: 1.0.0
-nacos:
-  config:
-    server-addr: 127.0.0.1:8848
